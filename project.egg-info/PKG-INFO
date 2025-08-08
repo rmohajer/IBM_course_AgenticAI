@@ -1,0 +1,24 @@
+Metadata-Version: 2.4
+Name: project
+Version: 0.1.0
+Summary: Add your description here
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: chromadb==1.0.12
+Requires-Dist: gradio==4.44.0
+Requires-Dist: ibm-watsonx-ai==1.1.2
+Requires-Dist: langchain==0.2.11
+Requires-Dist: langchain-community==0.2.10
+Requires-Dist: langchain-ibm==0.1.11
+Requires-Dist: llama-index==0.11.8
+Requires-Dist: llama-index-core>=0.11.23
+Requires-Dist: llama-index-embeddings-ibm>=0.2.1
+Requires-Dist: llama-index-llms-ibm>=0.2.1
+Requires-Dist: llama-index-readers-web>=0.2.4
+Requires-Dist: pydantic==2.9.1
+Requires-Dist: pypdf==4.3.1
+Requires-Dist: requests>=2.32.2
+Requires-Dist: ipykernel>=6.30.1
+Requires-Dist: langchain-groq>=0.1.10
+Requires-Dist: groq>=0.31.0
+Requires-Dist: langchain-mistralai>=0.1.13

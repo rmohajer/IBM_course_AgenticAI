@@ -1,33 +1,33 @@
+#%%
 from shared_functions import *
 from typing import List, Dict, Any
-from ibm_watsonx_ai.foundation_models.utils.enums import ModelTypes
-from ibm_watsonx_ai.foundation_models import ModelInference
 import json
+import groq
+from groq import Groq
+from langchain_groq import ChatGroq
+import os
+from dotenv import load_dotenv
 
 # Global variables
 food_items = []
 
-# IBM Watsonx.ai Configuration
-my_credentials = {
-    "url": "https://us-south.ml.cloud.ibm.com"
-}
+load_dotenv()
 
-model_id = 'ibm/granite-3-3-8b-instruct'
-gen_parms = {"max_new_tokens": 400}
-project_id = "skills-network"  # <--- NOTE: specify "skills-network" as your project_id
-space_id = None
-verify = False
+groq_api_key = os.getenv("GROQ_API_KEY")
+mistral_api_key = os.getenv("MISTRAL_API_KEY")
+
+#%%
 
 # Initialize the LLM model
-model = ModelInference(
-    model_id=model_id,
-    credentials=my_credentials,
-    params=gen_parms,
-    project_id=project_id,
-    space_id=space_id,
-    verify=verify,
-)
+model = ChatGroq(model="llama3-8b-8192",
+    temperature=0,
+    max_tokens=None,
+    timeout=None,
+    max_retries=2,
+    verbose=1)
 
+
+#%%
 
 def prepare_context_for_llm(query: str, search_results: List[Dict]) -> str:
     """Prepare structured context from search results for LLM"""
@@ -95,11 +95,11 @@ Please provide a helpful, short response that:
 Response:'''
 
         # Generate response using IBM Granite
-        generated_response = model.generate(prompt=prompt, params=None)
+        generated_response = model.invoke(prompt).content
         
         # Extract the generated text
-        if generated_response and "results" in generated_response:
-            response_text = generated_response["results"][0]["generated_text"]
+        if generated_response is not None:
+            response_text = generated_response
             
             # Clean up the response if needed
             response_text = response_text.strip()
@@ -360,8 +360,8 @@ def main():
         
         # Test LLM connection
         print("🔗 Testing LLM connection...")
-        test_response = model.generate(prompt="Hello", params=None)
-        if test_response and "results" in test_response:
+        test_response = model.invoke("Hello").content
+        if test_response is not None:
             print("✅ LLM connection established")
         else:
             print("❌ LLM connection failed")
