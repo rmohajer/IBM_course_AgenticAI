@@ -23,8 +23,7 @@ def generate_initial_facts(index: VectorStoreIndex) -> str:
         # Create LLM for generating facts
         watsonx_llm = create_watsonx_llm(
             temperature=0.0,
-            max_new_tokens=500,
-            decoding_method="sample"
+            max_new_tokens=500
         )
         
         # Create prompt template
@@ -64,8 +63,7 @@ def answer_user_query(index: VectorStoreIndex, user_query: str) -> Any:
         # Create LLM for answering questions
         watsonx_llm = create_watsonx_llm(
             temperature=0.0,
-            max_new_tokens=250,
-            decoding_method="greedy"
+            max_new_tokens=250
         )
         
         # Create prompt template

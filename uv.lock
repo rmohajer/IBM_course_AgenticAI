@@ -750,6 +750,15 @@ wheels = [
 ]
 
 [[package]]
+name = "eval-type-backport"
+version = "0.2.2"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/30/ea/8b0ac4469d4c347c6a385ff09dc3c048c2d021696664e26c7ee6791631b5/eval_type_backport-0.2.2.tar.gz", hash = "sha256:f0576b4cf01ebb5bd358d02314d31846af5e07678387486e2c798af0e7d849c1", size = 9079 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/ce/31/55cd413eaccd39125368be33c46de24a1f639f2e12349b0361b4678f3915/eval_type_backport-0.2.2-py3-none-any.whl", hash = "sha256:cb6ad7c393517f476f96d456d0412ea80f0a8cf96f6892834cd9340149111b0a", size = 5830 },
+]
+
+[[package]]
 name = "exceptiongroup"
 version = "1.3.0"
 source = { registry = "https://pypi.org/simple" }
@@ -1579,6 +1588,15 @@ wheels = [
 ]
 
 [[package]]
+name = "jsonpath-python"
+version = "1.0.6"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/b5/49/e582e50b0c54c1b47e714241c4a4767bf28758bf90212248aea8e1ce8516/jsonpath-python-1.0.6.tar.gz", hash = "sha256:dd5be4a72d8a2995c3f583cf82bf3cd1a9544cfdabf2d22595b67aff07349666", size = 18121 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/16/8a/d63959f4eff03893a00e6e63592e3a9f15b9266ed8e0275ab77f8c7dbc94/jsonpath_python-1.0.6-py3-none-any.whl", hash = "sha256:1e3b78df579f5efc23565293612decee04214609208a2335884b3ee3f786b575", size = 7552 },
+]
+
+[[package]]
 name = "jsonpointer"
 version = "3.0.0"
 source = { registry = "https://pypi.org/simple" }
@@ -2015,6 +2033,19 @@ wheels = [
 ]
 
 [[package]]
+name = "llama-index-embeddings-mistralai"
+version = "0.2.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "llama-index-core" },
+    { name = "mistralai" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/c5/78/5d393df9a122a36a2e315c9d279531c530a6cf0f361f475e2469f10bcdf3/llama_index_embeddings_mistralai-0.2.0.tar.gz", hash = "sha256:c334b6ae5a0a6656ff36271070ae714b10c3b00489daa8fc0fd4f07f6ccc49bc", size = 2340 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/4e/22/fdfc0b07e0d0e622de93b46edb82603782054e4fbce0ee356c01006bcb27/llama_index_embeddings_mistralai-0.2.0-py3-none-any.whl", hash = "sha256:e753209edb29d535c09bd2ecdc960350e62f80574a1eedf44a6479a7c4453cca", size = 2612 },
+]
+
+[[package]]
 name = "llama-index-embeddings-openai"
 version = "0.2.5"
 source = { registry = "https://pypi.org/simple" }
@@ -2081,6 +2112,19 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/43/3b/f3a2f43edc4107bbeb311ee05d59403530539ad12a94a0c5e5c1a26a5172/llama_index_llms_ibm-0.2.1.tar.gz", hash = "sha256:3ce4050285e4f441776a638d9285408ddf5ad317cc9e0f16054660ef6c62f24e", size = 6883 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/1a/9d/bd72ac4b2eeff1fabfbab1b490d45456abbf49666af94afb07fa8f51cfe9/llama_index_llms_ibm-0.2.1-py3-none-any.whl", hash = "sha256:da16021cb070de0ea457aadcd339cc93cc15a476f5a139720b9bee8834f286d0", size = 7486 },
+]
+
+[[package]]
+name = "llama-index-llms-langchain"
+version = "0.4.2"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "langchain" },
+    { name = "llama-index-core" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/c9/de/a17b506052497cc5e92ab925f31c7dbe08659af1371f3cb50348e0ec38dd/llama_index_llms_langchain-0.4.2.tar.gz", hash = "sha256:4ddbf8495ad6cfda6c5899cdf1cffe25a3e8317ae2e4bb1c41db5d3e184ace44", size = 4493 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/e6/b7/502cf122c7e4d12c80aeaca23f0209223c6208e33e3208f42f0607596e63/llama_index_llms_langchain-0.4.2-py3-none-any.whl", hash = "sha256:f36e6d06f5e31b7e4b83ea89f32a39ce3648bb7228c5aaf49d8af91485dc2ee1", size = 5196 },
 ]
 
 [[package]]
@@ -2440,6 +2484,23 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/d6/54/cfe61301667036ec958cb99bd3efefba235e65cdeb9c84d24a8293ba1d90/mdurl-0.1.2.tar.gz", hash = "sha256:bb413d29f5eea38f31dd4754dd7377d4465116fb207585f97bf925588687c1ba", size = 8729 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/b3/38/89ba8ad64ae25be8de66a6d463314cf1eb366222074cfda9ee839c56a4b4/mdurl-0.1.2-py3-none-any.whl", hash = "sha256:84008a41e51615a49fc9966191ff91509e3c40b939176e643fd50a5c2196b8f8", size = 9979 },
+]
+
+[[package]]
+name = "mistralai"
+version = "1.5.2"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "eval-type-backport" },
+    { name = "httpx" },
+    { name = "jsonpath-python" },
+    { name = "pydantic" },
+    { name = "python-dateutil" },
+    { name = "typing-inspect" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/53/8d/88b7c48878864f37c554a131d37352a4ed0ea3918df3e8cb625407ff374a/mistralai-1.5.2.tar.gz", hash = "sha256:f39e6e51e8939aac2602e4badcb18712cbee2df33d86100c559333e609b92d17", size = 133473 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/7c/97/5b428225ca4524b9722c8e1b2812c35f958ec5bb6a58c274c6c07a136da8/mistralai-1.5.2-py3-none-any.whl", hash = "sha256:5b1112acebbcad1afd7732ce0bd60614975b64999801c555c54768ac41f506ae", size = 278149 },
 ]
 
 [[package]]
@@ -3245,7 +3306,9 @@ dependencies = [
     { name = "llama-index" },
     { name = "llama-index-core" },
     { name = "llama-index-embeddings-ibm" },
+    { name = "llama-index-embeddings-mistralai" },
     { name = "llama-index-llms-ibm" },
+    { name = "llama-index-llms-langchain" },
     { name = "llama-index-readers-web" },
     { name = "pydantic" },
     { name = "pypdf" },

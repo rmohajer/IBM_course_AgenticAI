@@ -1,3 +1,5 @@
+#%%
+
 """Main script for running the Icebreaker Bot."""
 
 import sys
@@ -10,6 +12,18 @@ from modules.data_processing import split_profile_data, create_vector_database, 
 from modules.query_engine import generate_initial_facts, answer_user_query
 from typing import Dict, Any, Optional
 import config
+
+import os
+from dotenv import load_dotenv
+
+import gradio as gr
+
+load_dotenv()
+
+groq_api_key = os.getenv("GROQ_API_KEY")
+mistral_api_key = os.getenv("MISTRAL_API_KEY")
+
+#%%
 
 # Set up logging
 logging.basicConfig(
@@ -94,7 +108,7 @@ def main():
     parser.add_argument('--url', type=str, help='LinkedIn profile URL')
     parser.add_argument('--api-key', type=str, help='ProxyCurl API key')
     parser.add_argument('--mock', action='store_true', help='Use mock data instead of API')
-    parser.add_argument('--model', type=str, help='LLM model to use (e.g., "meta-llama/llama-3-3-70b-instruct")')
+    parser.add_argument('--model', type=str, help='LLM model to use (e.g., "openai/gpt-oss-120b")')
     
     args = parser.parse_args()
     

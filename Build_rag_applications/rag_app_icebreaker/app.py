@@ -12,6 +12,15 @@ from modules.llm_interface import change_llm_model
 from modules.query_engine import generate_initial_facts, answer_user_query
 import config
 
+import os
+from dotenv import load_dotenv
+
+
+load_dotenv()
+
+groq_api_key = os.getenv("GROQ_API_KEY")
+mistral_api_key = os.getenv("MISTRAL_API_KEY")
+
 # Set up logging
 logging.basicConfig(
     level=logging.INFO,
@@ -131,8 +140,8 @@ def create_gradio_interface():
     """Create the Gradio interface for the Icebreaker Bot."""
     # Define available LLM models
     available_models = [
-        "ibm/granite-3-2-8b-instruct",
-        "meta-llama/llama-3-3-70b-instruct"
+        "llama3-8b-8192",
+        "openai/gpt-oss-120b"
     ]
     
     with gr.Blocks(title="LinkedIn Icebreaker Bot") as demo:

@@ -24,6 +24,8 @@ dependencies = [
     "groq>=0.31.0",
     "langchain-mistralai>=0.1.13",
     "cryptography>=45.0.6",
+    "llama-index-embeddings-mistralai>=0.2.0",
+    "llama-index-llms-langchain>=0.4.2",
 ]
 
 [tool.setuptools]

@@ -23,5 +23,7 @@ Requires-Dist: langchain-groq>=0.1.10
 Requires-Dist: groq>=0.31.0
 Requires-Dist: langchain-mistralai>=0.1.13
 Requires-Dist: cryptography>=45.0.6
+Requires-Dist: llama-index-embeddings-mistralai>=0.2.0
+Requires-Dist: llama-index-llms-langchain>=0.4.2
 
 This is a Course series by IBM on RAG and AI agents
