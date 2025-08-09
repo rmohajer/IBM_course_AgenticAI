@@ -25,5 +25,9 @@ Requires-Dist: langchain-mistralai>=0.1.13
 Requires-Dist: cryptography>=45.0.6
 Requires-Dist: llama-index-embeddings-mistralai>=0.2.0
 Requires-Dist: llama-index-llms-langchain>=0.4.2
+Requires-Dist: wikipedia>=1.4.0
+Requires-Dist: openai>=1.99.3
+Requires-Dist: langchain-openai>=0.1.25
+Requires-Dist: langgraph>=0.4.5
 
 This is a Course series by IBM on RAG and AI agents
