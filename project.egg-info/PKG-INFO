@@ -33,5 +33,9 @@ Requires-Dist: matplotlib>=3.10.5
 Requires-Dist: seaborn>=0.13.2
 Requires-Dist: scikit-learn>=1.7.1
 Requires-Dist: pandas>=2.1.4
+Requires-Dist: pytube>=15.0.0
+Requires-Dist: ipython>=8.37.0
+Requires-Dist: yt-dlp>=2025.7.21
+Requires-Dist: youtube-transcript-api>=1.2.2
 
 This is a Course series by IBM on RAG and AI agents

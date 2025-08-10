@@ -27,3 +27,7 @@ matplotlib>=3.10.5
 seaborn>=0.13.2
 scikit-learn>=1.7.1
 pandas>=2.1.4
+pytube>=15.0.0
+ipython>=8.37.0
+yt-dlp>=2025.7.21
+youtube-transcript-api>=1.2.2
