@@ -31,3 +31,5 @@ pytube>=15.0.0
 ipython>=8.37.0
 yt-dlp>=2025.7.21
 youtube-transcript-api>=1.2.2
+langchain-experimental>=0.0.64
+mysql-connector-python==8.4.0
