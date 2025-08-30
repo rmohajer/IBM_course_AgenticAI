@@ -7,9 +7,10 @@ Description-Content-Type: text/markdown
 Requires-Dist: chromadb==1.0.12
 Requires-Dist: gradio==4.44.0
 Requires-Dist: ibm-watsonx-ai==1.1.2
-Requires-Dist: langchain==0.2.11
-Requires-Dist: langchain-community==0.2.10
-Requires-Dist: langchain-ibm==0.1.11
+Requires-Dist: langchain>=0.2.11
+Requires-Dist: langchain-community>=0.2.10
+Requires-Dist: langchain-tavily==0.2.11
+Requires-Dist: langchain-core>=0.3.15
 Requires-Dist: llama-index==0.11.8
 Requires-Dist: llama-index-core>=0.11.23
 Requires-Dist: llama-index-embeddings-ibm>=0.2.1
@@ -40,7 +41,5 @@ Requires-Dist: youtube-transcript-api>=1.2.2
 Requires-Dist: langchain-experimental>=0.0.64
 Requires-Dist: mysql-connector-python==8.4.0
 Requires-Dist: ipywidgets>=8.1.7
-Requires-Dist: pygraphviz>=1.14
-Requires-Dist: graphviz>=0.21
 
 This is a Course series by IBM on RAG and AI agents
