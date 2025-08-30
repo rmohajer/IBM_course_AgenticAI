@@ -34,3 +34,5 @@ youtube-transcript-api>=1.2.2
 langchain-experimental>=0.0.64
 mysql-connector-python==8.4.0
 ipywidgets>=8.1.7
+pygraphviz>=1.14
+graphviz>=0.21
