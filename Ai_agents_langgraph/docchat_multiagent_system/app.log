@@ -1,0 +1,4 @@
+2025-09-01 08:58:51 | INFO | Processing new/changed documents...
+2025-09-01 08:58:51 | INFO | Loading from cache: /private/var/folders/0z/6z_9lrtd6j3_gnlsyv9rb5b00000gn/T/gradio/29ade2be2f75e33b94e88fc676a31aaaab205e4ae7f146bc284c57d93d858645/google-2024-environmental-report.pdf
+2025-09-01 08:58:51 | INFO | Total unique chunks: 327
+2025-09-01 09:01:15 | ERROR | Processing error: RetryError[<Future at 0x304b98e00 state=finished raised HTTPStatusError>]

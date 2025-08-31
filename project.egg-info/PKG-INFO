@@ -41,5 +41,7 @@ Requires-Dist: youtube-transcript-api>=1.2.2
 Requires-Dist: langchain-experimental>=0.0.64
 Requires-Dist: mysql-connector-python==8.4.0
 Requires-Dist: ipywidgets>=8.1.7
+Requires-Dist: docling>=2.48.0
+Requires-Dist: loguru>=0.7.3
 
 This is a Course series by IBM on RAG and AI agents
