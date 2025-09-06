@@ -46,6 +46,8 @@ dependencies = [
     "loguru>=0.7.3",
     "rank-bm25>=0.2.2",
     "torch>=2.8.0",
+    "posthog<6.0.0",
+    "lark>=1.2.2",
 ]
 
 [tool.setuptools]

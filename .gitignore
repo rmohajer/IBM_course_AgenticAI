@@ -1,3 +1,4 @@
 .venv
 .env
 Ai_agents_langgraph/docchat_multiagent_system/chroma_db/
+Advanced_rag_with_vecror_db_retriever/chromadb/

@@ -45,5 +45,7 @@ Requires-Dist: docling>=2.48.0
 Requires-Dist: loguru>=0.7.3
 Requires-Dist: rank-bm25>=0.2.2
 Requires-Dist: torch>=2.8.0
+Requires-Dist: posthog<6.0.0
+Requires-Dist: lark>=1.2.2
 
 This is a Course series by IBM on RAG and AI agents
