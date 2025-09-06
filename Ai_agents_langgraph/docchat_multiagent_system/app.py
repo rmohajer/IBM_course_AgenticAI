@@ -1,3 +1,4 @@
+#%%
 import gradio as gr
 import hashlib
 from typing import List, Dict
@@ -8,7 +9,15 @@ from retriever.builder import RetrieverBuilder
 from agents.workflow import AgentWorkflow
 from config import constants, settings
 from utils.logging import logger
+from dotenv import load_dotenv
+from langchain_mistralai import MistralAIEmbeddings
 
+load_dotenv()
+
+groq_api_key = os.getenv("GROQ_API_KEY")
+mistral_api_key = os.getenv("MISTRAL_API_KEY")
+
+#%%
 # 1) Define some example data 
 #    (i.e. question + paths to documents relevant to that question).
 EXAMPLES = {
@@ -199,3 +208,63 @@ def _get_file_hashes(uploaded_files: List) -> frozenset:
 
 if __name__ == "__main__":
     main()
+
+
+#%%
+# retriever_builder = RetrieverBuilder()
+# processor = DocumentProcessor()
+# from config.settings import Settings
+# from langchain_community.vectorstores import Chroma
+# settings = Settings()
+
+
+# EXAMPLES = {
+#     "Google 2024 Environmental Report": {
+#         "question": "Retrieve the data center PUE efficiency values in Singapore 2nd facility in 2019 and 2022. Also retrieve regional average CFE in Asia pacific in 2023",
+#         "file_paths": ["examples/google-2024-environmental-report.pdf"]  
+#     },
+#     "DeepSeek-R1 Technical Report": {
+#         "question": "Summarize DeepSeek-R1 model's performance evaluation on all coding tasks against OpenAI o1-mini model",
+#         "file_paths": ["examples/DeepSeek Technical Report.pdf"]
+#     }
+# }
+
+# example_key = "Google 2024 Environmental Report"
+# ex_data = EXAMPLES[example_key]
+# question = ex_data["question"]
+# file_paths = ex_data["file_paths"]
+
+# # Prepare the file list to return. We read them from disk to
+# # give Gradio something it can handle as "uploaded" files.
+# loaded_files = []
+# for path in file_paths:
+#     if os.path.exists(path):
+#         # Gradio can accept a path directly, or a file-like object
+#         loaded_files.append(path)
+#     else:
+#         logger.warning(f"File not found: {path}")
+
+# chunks = processor.process(loaded_files)
+
+# embeddings =  MistralAIEmbeddings(
+#         model="mistral-embed"
+#     )
+
+# texts = [doc.page_content for doc in chunks]
+# vectors = embeddings.embed_documents(texts)
+
+# vector_store = Chroma.from_documents(
+#                 documents=chunks,
+#                 embedding=vectors,
+#                 persist_directory=settings.CHROMA_DB_PATH
+#             )
+# vector_retriever = vector_store.as_retriever(search_kwargs={"k": settings.VECTOR_SEARCH_K})
+
+# # retriever = retriever_builder.build_hybrid_retriever(chunks)
+
+# question = "Retrieve the data center PUE efficiency values in Singapore 2nd facility in 2019 and 2022. Also retrieve regional average CFE in Asia pacific in 2023"
+# vector_retriever.invoke(question)
+
+import pytorch
+
+# %%

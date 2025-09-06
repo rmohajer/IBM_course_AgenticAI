@@ -44,6 +44,8 @@ dependencies = [
     "ipywidgets>=8.1.7",
     "docling>=2.48.0",
     "loguru>=0.7.3",
+    "rank-bm25>=0.2.2",
+    "torch>=2.8.0",
 ]
 
 [tool.setuptools]

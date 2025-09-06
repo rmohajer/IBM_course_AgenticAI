@@ -2,3 +2,22 @@
 2025-09-01 08:58:51 | INFO | Loading from cache: /private/var/folders/0z/6z_9lrtd6j3_gnlsyv9rb5b00000gn/T/gradio/29ade2be2f75e33b94e88fc676a31aaaab205e4ae7f146bc284c57d93d858645/google-2024-environmental-report.pdf
 2025-09-01 08:58:51 | INFO | Total unique chunks: 327
 2025-09-01 09:01:15 | ERROR | Processing error: RetryError[<Future at 0x304b98e00 state=finished raised HTTPStatusError>]
+2025-09-06 10:49:10 | INFO | Processing new/changed documents...
+2025-09-06 10:49:10 | INFO | Loading from cache: /private/var/folders/0z/6z_9lrtd6j3_gnlsyv9rb5b00000gn/T/gradio/52d8ca3ac93e88cef9944e1fd03b0e04aec5954495a8250fb2fadf8fa20a4dad/DeepSeek Technical Report.pdf
+2025-09-06 10:49:10 | INFO | Total unique chunks: 29
+2025-09-06 10:49:16 | ERROR | Processing error: Could not import rank_bm25, please install with `pip install rank_bm25`.
+2025-09-06 10:50:11 | INFO | Processing new/changed documents...
+2025-09-06 10:50:11 | INFO | Loading from cache: /private/var/folders/0z/6z_9lrtd6j3_gnlsyv9rb5b00000gn/T/gradio/52d8ca3ac93e88cef9944e1fd03b0e04aec5954495a8250fb2fadf8fa20a4dad/DeepSeek Technical Report.pdf
+2025-09-06 10:50:11 | INFO | Total unique chunks: 29
+2025-09-06 11:13:02 | INFO | Loading from cache: examples/google-2024-environmental-report.pdf
+2025-09-06 11:13:02 | INFO | Total unique chunks: 327
+2025-09-06 11:19:18 | INFO | Loading from cache: examples/google-2024-environmental-report.pdf
+2025-09-06 11:19:18 | INFO | Total unique chunks: 327
+2025-09-06 11:34:18 | INFO | Loading from cache: examples/google-2024-environmental-report.pdf
+2025-09-06 11:34:18 | INFO | Total unique chunks: 327
+2025-09-06 11:39:19 | INFO | Loading from cache: examples/google-2024-environmental-report.pdf
+2025-09-06 11:39:19 | INFO | Total unique chunks: 327
+2025-09-06 11:43:08 | INFO | Loading from cache: examples/google-2024-environmental-report.pdf
+2025-09-06 11:43:08 | INFO | Total unique chunks: 327
+2025-09-06 12:52:07 | INFO | Loading from cache: examples/google-2024-environmental-report.pdf
+2025-09-06 12:52:07 | INFO | Total unique chunks: 327

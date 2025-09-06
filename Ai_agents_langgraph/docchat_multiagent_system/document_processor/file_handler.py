@@ -18,7 +18,7 @@ class DocumentProcessor:
         
     def validate_files(self, files: List) -> None:
         """Validate the total size of the uploaded files."""
-        total_size = sum(os.path.getsize(f.name) for f in files)
+        total_size = sum(os.path.getsize(f) for f in files)
         if total_size > constants.MAX_TOTAL_SIZE:
             raise ValueError(f"Total size exceeds {constants.MAX_TOTAL_SIZE//1024//1024}MB limit")
 
@@ -31,16 +31,16 @@ class DocumentProcessor:
         for file in files:
             try:
                 # Generate content-based hash for caching
-                with open(file.name, "rb") as f:
+                with open(file, "rb") as f:
                     file_hash = self._generate_hash(f.read())
                 
                 cache_path = self.cache_dir / f"{file_hash}.pkl"
                 
                 if self._is_cache_valid(cache_path):
-                    logger.info(f"Loading from cache: {file.name}")
+                    logger.info(f"Loading from cache: {file}")
                     chunks = self._load_from_cache(cache_path)
                 else:
-                    logger.info(f"Processing and caching: {file.name}")
+                    logger.info(f"Processing and caching: {file}")
                     chunks = self._process_file(file)
                     self._save_to_cache(chunks, cache_path)
                 
@@ -52,7 +52,7 @@ class DocumentProcessor:
                         seen_hashes.add(chunk_hash)
                         
             except Exception as e:
-                logger.error(f"Failed to process {file.name}: {str(e)}")
+                logger.error(f"Failed to process {file}: {str(e)}")
                 continue
                 
         logger.info(f"Total unique chunks: {len(all_chunks)}")
@@ -60,7 +60,7 @@ class DocumentProcessor:
 
     def _process_file(self, file) -> List:
         """Original processing logic with Docling"""
-        if not file.name.endswith(('.pdf', '.docx', '.txt', '.md')):
+        if not file.endswith(('.pdf', '.docx', '.txt', '.md')):
             logger.warning(f"Skipping unsupported file type: {file.name}")
             return []
 
