@@ -48,6 +48,9 @@ dependencies = [
     "torch>=2.8.0",
     "posthog<6.0.0",
     "lark>=1.2.2",
+    "yfinance==0.2.58",
+    "finnhub-python>=2.4.24",
+    "stockstats>=0.6.5",
 ]
 
 [tool.setuptools]
