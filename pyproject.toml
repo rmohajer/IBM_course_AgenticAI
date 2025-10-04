@@ -51,6 +51,7 @@ dependencies = [
     "yfinance==0.2.58",
     "finnhub-python>=2.4.24",
     "stockstats>=0.6.5",
+    "pygraphviz>=1.14",
 ]
 
 [tool.setuptools]
