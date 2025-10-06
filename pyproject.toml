@@ -51,7 +51,10 @@ dependencies = [
     "yfinance==0.2.58",
     "finnhub-python>=2.4.24",
     "stockstats>=0.6.5",
-    "pygraphviz>=1.14",
+    "llama-index-embeddings-huggingface>=0.3.1",
+    "llama-index-retrievers-bm25>=0.4.0",
+    "pystemmer>=2.2.0.3",
+    "sentence-transformers>=5.1.1",
 ]
 
 [tool.setuptools]

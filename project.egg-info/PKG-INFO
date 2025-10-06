@@ -50,6 +50,9 @@ Requires-Dist: lark>=1.2.2
 Requires-Dist: yfinance==0.2.58
 Requires-Dist: finnhub-python>=2.4.24
 Requires-Dist: stockstats>=0.6.5
-Requires-Dist: pygraphviz>=1.14
+Requires-Dist: llama-index-embeddings-huggingface>=0.3.1
+Requires-Dist: llama-index-retrievers-bm25>=0.4.0
+Requires-Dist: pystemmer>=2.2.0.3
+Requires-Dist: sentence-transformers>=5.1.1
 
 This is a Course series by IBM on RAG and AI agents
