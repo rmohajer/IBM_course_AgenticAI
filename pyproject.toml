@@ -45,7 +45,6 @@ dependencies = [
     "docling>=2.48.0",
     "loguru>=0.7.3",
     "rank-bm25>=0.2.2",
-    "torch>=2.8.0",
     "posthog<6.0.0",
     "lark>=1.2.2",
     "yfinance==0.2.58",
