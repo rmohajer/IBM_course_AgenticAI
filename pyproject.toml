@@ -54,6 +54,7 @@ dependencies = [
     "llama-index-retrievers-bm25>=0.4.0",
     "pystemmer>=2.2.0.3",
     "sentence-transformers>=5.1.1",
+    "flask>=3.1.2",
 ]
 
 [tool.setuptools]
