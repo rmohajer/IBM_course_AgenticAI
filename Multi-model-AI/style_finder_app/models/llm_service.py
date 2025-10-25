@@ -78,10 +78,10 @@ class LlamaVisionService:
             ]
             
             # Send the request to the model
-            response = self.model.invoke(messages=messages)
+            response = self.model.invoke(input=messages)
             
             # Extract and validate the response
-            content = response['choices'][0]['message']['content']
+            content = response.content
             
             logger.info("Received response with length: %d", len(content))
             
@@ -95,8 +95,7 @@ class LlamaVisionService:
             logger.error("Error generating response: %s", str(e))
             return f"Error generating response: {e}"
     
-    def generate_fashion_response(self, user_image_base64, matched_row, all_items, 
-                                 similarity_score, threshold=0.8):
+    def generate_fashion_response(self, user_image_base64, matched_row, all_items, similarity_score, threshold=0.8):
         """
         Generate a fashion-specific response using role-based prompts.
         
