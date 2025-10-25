@@ -55,6 +55,8 @@ dependencies = [
     "pystemmer>=2.2.0.3",
     "sentence-transformers>=5.1.1",
     "flask>=3.1.2",
+    "serpapi>=0.1.5",
+    "google-search-results>=2.4.2",
 ]
 
 [tool.setuptools]

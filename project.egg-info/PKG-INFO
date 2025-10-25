@@ -54,5 +54,7 @@ Requires-Dist: llama-index-retrievers-bm25>=0.4.0
 Requires-Dist: pystemmer>=2.2.0.3
 Requires-Dist: sentence-transformers>=5.1.1
 Requires-Dist: flask>=3.1.2
+Requires-Dist: serpapi>=0.1.5
+Requires-Dist: google-search-results>=2.4.2
 
 This is a Course series by IBM on RAG and AI agents

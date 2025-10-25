@@ -1470,6 +1470,15 @@ wheels = [
 ]
 
 [[package]]
+name = "google-search-results"
+version = "2.4.2"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "requests" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/77/30/b3a6f6a2e00f8153549c2fa345c58ae1ce8e5f3153c2fe0484d444c3abcb/google_search_results-2.4.2.tar.gz", hash = "sha256:603a30ecae2af8e600b22635757a6df275dad4b934f975e67878ccd640b78245", size = 18818 }
+
+[[package]]
 name = "googleapis-common-protos"
 version = "1.70.0"
 source = { registry = "https://pypi.org/simple" }
@@ -4515,6 +4524,7 @@ dependencies = [
     { name = "docling" },
     { name = "finnhub-python" },
     { name = "flask" },
+    { name = "google-search-results" },
     { name = "gradio" },
     { name = "groq" },
     { name = "ibm-watsonx-ai" },
@@ -4556,6 +4566,7 @@ dependencies = [
     { name = "scikit-learn" },
     { name = "seaborn" },
     { name = "sentence-transformers" },
+    { name = "serpapi" },
     { name = "stockstats" },
     { name = "wikipedia" },
     { name = "yfinance" },
@@ -6028,6 +6039,18 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/21/47/7d61a19ba7e6b5f36f0ffff5bbf032a1c1913612caac611e12383069eda0/sentence_transformers-5.1.1.tar.gz", hash = "sha256:8af3f844b2ecf9a6c2dfeafc2c02938a87f61202b54329d70dfd7dfd7d17a84e", size = 374434 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/48/21/4670d03ab8587b0ab6f7d5fa02a95c3dd6b1f39d0e40e508870201f3d76c/sentence_transformers-5.1.1-py3-none-any.whl", hash = "sha256:5ed544629eafe89ca668a8910ebff96cf0a9c5254ec14b05c66c086226c892fd", size = 486574 },
+]
+
+[[package]]
+name = "serpapi"
+version = "0.1.5"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "requests" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/f0/fa/3fd8809287f3977a3e752bb88610e918d49cb1038b14f4bc51e13e594197/serpapi-0.1.5.tar.gz", hash = "sha256:b9707ed54750fdd2f62dc3a17c6a3fb7fa421dc37902fd65b2263c0ac765a1a5", size = 14191 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/df/6a/21deade04100d64844e494353a5d65e7971fbdfddf78eb1f248423593ad0/serpapi-0.1.5-py2.py3-none-any.whl", hash = "sha256:6467b6adec1231059f754ccaa952b229efeaa8b9cae6e71f879703ec9e5bb3d1", size = 10966 },
 ]
 
 [[package]]
