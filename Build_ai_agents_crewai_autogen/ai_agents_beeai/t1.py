@@ -16,12 +16,12 @@ groq_api_key = os.getenv("GROQ_API_KEY")
 
 model_id = "llama-3.1-8b-instant" # 	qwen/qwen3-32b  openai/gpt-oss-20b llama-3.1-8b-instant
     
-llm = ChatGroq(model=model_id,
-    temperature=0,
-    max_tokens=None,
-    timeout=None,
-    max_retries=2,
-    verbose=1)
+# llm = ChatGroq(model=model_id,
+#     temperature=0,
+#     max_tokens=None,
+#     timeout=None,
+#     max_retries=2,
+#     verbose=1)
 
 print("Environment configured successfully!")
 
@@ -39,10 +39,10 @@ async def basic_chat_example():
         UserMessage(content="Help me brainstorm a unique business idea for a food delivery service that doesn't exist yet.")
     ]
 
-    llm = ChatModel.from_name(f"groq/{model_id}", ChatModelParameters(temperature=0))
+    llm = ChatModel.from_name(f"groq:{model_id}", ChatModelParameters(temperature=0))
     
     # Generate response using create() method
-    response = await llm.invoke(input=messages)
+    response = await llm.create(messages=messages)
     
     print("User: Help me brainstorm a unique business idea for a food delivery service that doesn't exist yet.")
     print(f"Assistant: {response.get_text_content()}")
