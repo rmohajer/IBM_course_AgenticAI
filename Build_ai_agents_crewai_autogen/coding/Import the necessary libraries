@@ -1,0 +1,48 @@
+# Import the necessary libraries
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Create an array of x values ranging from -2π to 2π
+x = np.linspace(-2 * np.pi, 2 * np.pi, 400)
+
+# Calculate the corresponding y values for the sine wave
+y = np.sin(x)
+
+# Create the plot
+plt.plot(x, y, label='Sine Wave', color='b', linewidth=2, linestyle='--')
+
+# Add title and labels
+plt.title('Sine Wave from -2π to 2π')
+plt.xlabel('Angular Position (radians)')
+plt.ylabel('Sine Value')
+plt.legend(loc='upper right')
+
+# Add grid lines
+plt.grid(True, linestyle='--', alpha=0.5)
+
+# Add x-axis zero lines
+plt.axhline(y=0, color='k', linestyle='-', linewidth=1)
+plt.axvline(x=0, color='k', linestyle='-', linewidth=1)
+
+# Add key points
+plt.scatter(0, np.sin(0), color='r', s=100, label='Origin')
+plt.annotate('Maximum\n(y = 1)', xy=(0, 1), xytext=(2, 0), arrowprops={'width': 0.5, 'headwidth': 10})
+plt.annotate('Minimum\n(y = -1)', xy=(0, -1), xytext=(-2, 0), arrowprops={'width': 0.5, 'headwidth': 10})
+
+# Set x-axis limits
+plt.xlim(-2 * np.pi, 2 * np.pi)
+
+# Set y-axis limits
+plt.ylim(-1.5, 1.5)
+
+# Set axis equal to have the same scale for both x and y axes
+plt.gca().set_aspect('equal')
+
+# Set x-axis ticks
+plt.xticks(np.linspace(-2 * np.pi, 2 * np.pi, 5))
+
+# Save the plot as an image file
+plt.savefig('sine_wave.png', dpi=300)
+
+# Display the plot
+plt.show()
